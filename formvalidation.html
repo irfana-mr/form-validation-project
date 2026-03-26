@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form with js</title>
+</head>
+<body>
+    <form onsubmit="return submitForm()">
+        <label for="">Name</label>
+        <br>
+        <input type="text" id="username">
+        <br>
+        <span id="msg1" style="color: red;"></span>
+        <br>
+        <label for="">Number</label>
+        <br>
+        <input type="number" id="usernum">
+        <br>
+        <span style="color: red;" id="msg2"></span >
+        <br>
+        <label for="">Email</label>
+        <br>
+        <input type="email" id="usermail">
+        <br>
+        <span id="msg3" style="color: red;"></span>
+        <br>
+        <input type="submit" >
+    </form>
+</body>
+<script>
+    function submitForm(){
+        let Username = document.getElementById("username").value;
+        let Usernumber = document.getElementById("usernum").value;
+        let Useremail = document.getElementById("usermail").value;
+        if(Username == ""){
+            document.getElementById("msg1").innerHTML ="Kindly Enter Name";
+            return false;
+        }else{
+            document.getElementById("msg1").innerHTML="";
+        }
+
+         if(Usernumber == ""){
+            document.getElementById("msg2").innerHTML ="Kindly Enter Number";
+            return false;
+        }else{
+            document.getElementById("msg2").innerHTML="";
+        }
+
+        if(Useremail == ""){
+            document.getElementById("msg3").innerHTML ="Kindly Enter Email";
+            return false;
+        }else{
+            document.getElementById("msg3").innerHTML="";
+            
+        }
+        alert("form Submitted")
+        return true;
+
+        
+        
+    }
+</script>
+</html>
